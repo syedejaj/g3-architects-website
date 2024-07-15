@@ -119,6 +119,55 @@ main>section {
     font-weight: 500;
 }
 
+/* some fact styles  */
+.fact-card {
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#fact-description {
+    max-width: 540px;
+}
+
+/* our spondors styles */
+.sponsor-info {
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.our-companies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.our-companies img {
+    filter: grayscale(100%);
+}
+
 /* responsive design starts here */
 @media screen and (max-width: 576px) {
 
@@ -132,8 +181,20 @@ main>section {
         margin-left: 20px;
     }
 
-    .team-image-container {
-        grid-template-columns: repeat(1, 1fr);
+    .team-image-container,
+    .facts-container,
+    .our-companies {
+        grid-template-columns: 1fr;
+    }
+
+    .facts-container {
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .our-companies {
+        justify-items: center;
+        gap: 35px;
     }
 }
 
@@ -145,5 +206,12 @@ main>section {
 
     .our-features {
         margin: 50px auto;
+    }
+
+    .facts-container,
+    .our-companies {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 24px;
     }
 }
